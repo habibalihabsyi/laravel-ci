@@ -16,7 +16,7 @@ jobs:
       uses: fifsky/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
+        user: ${{ secrets.USER }}
         key: ${{ secrets.KEY }}
         port: 22
         script: whoami
