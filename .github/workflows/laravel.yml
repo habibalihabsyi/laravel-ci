@@ -13,6 +13,6 @@ jobs:
 
     steps:
     - name: Deployment
-      run: ssh ${{ secrets.USER }}@${{ secrets.HOST }}
+      run: /usr/bin/bash ssh ${{ secrets.USER }}@${{ secrets.HOST }}
 
 
