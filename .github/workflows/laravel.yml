@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install Dependencies
-      run: composer install
-    - name: Generate key
-      run: php artisan key:generate
+    - name: Deployment
+      with:
+        script: '/var/www/laravel-ci && ./deployer.sh'
+
+
