@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Deployment
-      uses: appleboy/ssh-action@v0.1.4
+      uses: fifsky/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
