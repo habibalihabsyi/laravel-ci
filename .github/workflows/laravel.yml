@@ -19,8 +19,6 @@ jobs:
         username: habib
         key: ${{ secrets.KEY }}
         port: 22
-        script: |
-          cd /var/www/laravel-ci
-          ./deployer.sh
+        script: whoami
 
 
