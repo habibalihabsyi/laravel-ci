@@ -15,10 +15,10 @@ jobs:
     - name: Deployment
       uses: appleboy/ssh-action@master
       with:
-        host: 34.128.85.72
-        username: habib
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
         key: ${{ secrets.KEY }}
-        port: 22
+        port: ${{ secrets.PORT }}
         script: whoami
 
 
