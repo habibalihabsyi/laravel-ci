@@ -17,7 +17,7 @@ jobs:
       with:
         host: 34.128.85.72
         username: habib
-        password: ${{ secrets.KEY }}
+        key: ${{ secrets.KEY }}
         port: 22
         script: |
           cd /var/www/laravel-ci
