@@ -13,7 +13,6 @@ jobs:
 
     steps:
     - name: Deployment
-      with:
-        script: '/var/www/laravel-ci && ./deployer.sh'
+      run: cd /var/www/laravel-ci && ./deployer.sh
 
 
