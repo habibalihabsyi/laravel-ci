@@ -13,6 +13,11 @@ jobs:
 
     steps:
     - name: Deployment
-      run: /usr/bin/bash ssh ${{ secrets.USER }}@${{ secrets.HOST }}
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.KEY }}
+        script: whoami
 
 
