@@ -13,6 +13,14 @@ jobs:
 
     steps:
     - name: Deployment
-      run: cd /var/www/laravel-ci && ./deployer.sh
+      uses: appleboy/ssh-action@master
+      with:
+        host: 34.128.85.72
+        username: habib
+        password: ${{ secrets.KEY }}
+        port: 22
+        script: |
+          cd /var/www/laravel-ci
+          ./deployer.sh
 
 
