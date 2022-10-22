@@ -13,6 +13,6 @@ jobs:
 
     steps:
     - name: Deployment
-      run: php artisan down
+      run: echo "ksksks"
 
 
