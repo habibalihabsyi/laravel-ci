@@ -13,6 +13,12 @@ jobs:
 
     steps:
     - name: Deployment
-      run: composer install
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.KEY }}
+        port: 22
+        script: whoami
 
 
