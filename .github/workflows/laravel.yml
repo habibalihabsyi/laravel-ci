@@ -19,7 +19,7 @@ jobs:
         username: ${{ secrets.USER }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        run: |
+        script: |
           cd public_html/ci.pwktesting.online/
           git pull
 
