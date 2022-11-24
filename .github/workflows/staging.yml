@@ -3,9 +3,11 @@ name: Staging Environtment
 on:
   push:
     branches:
+    - master
     - dev/**
   pull_request:
     branches:
+    - master
     - dev/**
 
 jobs:
