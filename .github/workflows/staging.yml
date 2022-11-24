@@ -1,0 +1,27 @@
+name: Staging Environtment
+
+on:
+  push:
+    branches: [ "master", "dev/**" ]
+  pull_request:
+    branches: [ "master", "dev/**" ]
+
+jobs:
+  laravel-tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deployment
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.KEY }}
+        script: |
+          cd public_html/staging.ci.pwktesting.online/
+          git pull
+
+
+
