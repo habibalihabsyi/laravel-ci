@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.KEY }}
         script: |
           cd public_html/staging.ci.pwktesting.online/
-          git pull
+          git pull origin dev/**
 
 
 
